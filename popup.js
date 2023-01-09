@@ -8,15 +8,12 @@ $(async () => {
 		});
 	else {
 		$('#darkmode').prop('disabled', true)
-		$('#status').html('Only work in Zalo web')
+		$('#status').html('Only work on Zalo web')
 		$('#status').show()		
 	}
 
 	$('#darkmode').change(() => {
 		let prop = $('#darkmode').prop('checked')
-		// $('#status').html(JSON.stringify(prop))
-		
-
 		if(tab.url.startsWith(zalourl)){
 			chrome.storage.sync.set({
 				darkmode: prop

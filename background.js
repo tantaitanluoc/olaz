@@ -22,10 +22,6 @@ chrome.runtime.onMessage.addListener(
 
 
 async function toggleDarkMode(darkmode, tab){
-   // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
-  // const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
-    // Next state will always be the opposite
-  // const nextState = prevState === 'ON' ? 'OFF' : 'ON'
   const nextState = darkmode ? 'ON': 'OFF';
 
     // Set the action badge to the next state
