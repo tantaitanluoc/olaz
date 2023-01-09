@@ -3,7 +3,7 @@ const lg = console.log
 
 $(() =>{
 	chrome.storage.sync.get("darkmode",rs => {
-		lg(rs)
+		// lg(rs)
 		if(rs.darkmode){
 			sendRequest('dm-content', rs.darkmode);
 		}
