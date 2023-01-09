@@ -18,7 +18,7 @@ $(async () => {
 			chrome.storage.sync.set({
 				darkmode: prop
 			});
-			sendRequest('dmchange', prop, tab)
+			sendRequest('dm-popup', prop, tab)
 		}
 		else{
 			$('#status').html('Only work in Zalo web')
@@ -38,7 +38,9 @@ async function getCurrentTab() {
 
 function sendRequest(request, dmchange, currentTab){
 	chrome.runtime.sendMessage({msg: request, darkmode: dmchange, tab: currentTab}, res => {
-		if(!res.success)
-			$('#status').html("Error")
+		if(!res.success){
+			$('#status').html("Error");
+			$('#status').show();
+		}
 	});
 }

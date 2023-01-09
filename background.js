@@ -8,13 +8,13 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if(request.msg == 'dmchange'){
+    if(request.msg == 'dm-popup'){
       toggleDarkMode(request.darkmode, request.tab);
       sendResponse({success: true});
     }
-    if(request.msg == 'olaz'){
+    if(request.msg == 'dm-content'){
       toggleDarkMode(request.darkmode, sender.tab);
-      sendResponse({success: true});
+      sendResponse({success: false, rs:sender});
     }
   }
   );

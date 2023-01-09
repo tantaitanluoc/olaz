@@ -5,7 +5,7 @@ $(() =>{
 	chrome.storage.sync.get("darkmode",rs => {
 		lg(rs)
 		if(rs.darkmode){
-			sendRequest('olaz', rs.darkmode);
+			sendRequest('dm-content', rs.darkmode);
 		}
 
 	})
