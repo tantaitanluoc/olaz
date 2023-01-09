@@ -1,0 +1,40 @@
+.flx, .flx-col, .flx-1 > *, .group-search, .card, 
+.conv-item, #contact-search-input, #contact-search, #ztoolbar,
+.img-msg-v2__ft, .rel.quote-banner, .chat-message__actions, .reacts-list,
+.call-msg, .message-view__banner, .ci-th__er, .tds-bubble-info-ecard__container, div-24, div-14, 
+.popover-v3, .z--btn--v2, .zl-input, .sticker-selector__content__name, .sticker-selector__content,
+.zmenu-body, .ReactVirtualized__Grid, .item-content, .friend-center-item-v2, .contact-list-item, .friend-center-main,
+.todo-view > *, .todo-tab > *, .todo-content-list > *, .emp-txt, .chat-group-topic__item, 
+.zl-modal__dialog, .gridv2, .chat-info-general__section__header, .zmenu-item, .file-message__actions-icon{
+  background: #121212 !important;
+  color: #ffffff !important;
+
+}
+i, .chat-info-general__item--title {
+  color: #ffffff !important;
+}
+.icon-only:hover, .reacts-list.me, .zl-modal__container, .user-profile-footer-button:hover {
+  background: #292929 !important;
+}
+.card.me:not(.card--sticker), :not(.call-msg-sent-time, .card--sticker) > .card-send-time.me, 
+.call-msg.--caller, .zavatar, .setting-menu {
+  background: transparent !important;
+}
+.card--text, .img-msg-v2, .call-msg, .name-card, .file-message, .chat-info-general__section--border{
+  border: 1px solid #454545 !important;
+}
+.conv-item-title__name {
+  color: #fff !important;
+}
+.user-name-wrapper, .file-message__content-title, .footer__left, 
+.footer__right, .call-msg__title, .content-title, 
+.text-is-phone-number, .user__name, .message-view__ecard_new_fr__title, 
+div[data-translate-inner="STR_CONTACT_SUGGEST_FRIEND_2"],
+.friend-profile__footer__content, .zl-label, .setting-section > *, .setting-section-label > *, .zl-label, .recent-header,
+.chat-info__header__title > *, .cb-info-file-item__file-name > *  {
+  color: #337DFF !important;
+}
+
+.friend-profile__detail__line {
+  border-top: 1px solid #454545 !important;;
+}
