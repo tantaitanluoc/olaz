@@ -1,21 +1,28 @@
 const zalourl = "https://chat.zalo.me/";
 
-$(() => {
-	chrome.storage.sync.get("darkmode", rs => {
-		$('#darkmode').prop('checked', rs.darkmode)
+$(async () => {
+	const tab = await getCurrentTab();
+	if(tab.url.startsWith(zalourl))
+		chrome.storage.sync.get("darkmode", rs => {
+			$('#darkmode').prop('checked', rs.darkmode)
+		});
+	else {
+		$('#darkmode').prop('disabled', true)
+		$('#status').html('Only work in Zalo web')
+		$('#status').show()		
+	}
 
-	})
-	$('#darkmode').change(async() => {
+	$('#darkmode').change(() => {
 		let prop = $('#darkmode').prop('checked')
 		// $('#status').html(JSON.stringify(prop))
+		
 
-		chrome.storage.sync.set({
-			darkmode: prop
-		});
-		let tab = await getCurrentTab();
-
-		if(tab.url.startsWith(zalourl))
+		if(tab.url.startsWith(zalourl)){
+			chrome.storage.sync.set({
+				darkmode: prop
+			});
 			sendRequest('dmchange', prop, tab)
+		}
 		else{
 			$('#status').html('Only work in Zalo web')
 			$('#status').show()
